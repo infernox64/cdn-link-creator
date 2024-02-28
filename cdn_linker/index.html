@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>cdn link creator</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="./style.css">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.css' integrity='sha512-hhSu9overYjKfSjPCtJW3688VHkfBh+W1pR5Mysll91bOJwGjYntytGTtVXb2aisFOaYXXDrO38NKXDRPJWu7A==' crossorigin='anonymous'/>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js' integrity='sha512-2iwCHjuj+PmdCyvb88rMOch0UcKQxVHi/gsAml1fN3eg82IDaO/cdzzeXX4iF2VzIIes7pODE1/G0ts3QBwslA==' crossorigin='anonymous'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.js' integrity='sha512-ynDTbjF5rUHsWBjz7nsljrrSWqLTPJaORzSe5aGCFxOigRZRmwM05y+kuCtxaoCSzVGB1Ky3XeRZsDhbSLdzXQ==' crossorigin='anonymous'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.js' integrity='sha512-lsA4IzLaXH0A+uH6JQTuz6DbhqxmVygrWv1CpC/s5vGyMqlnP0y+RYt65vKxbaVq+H6OzbbRtxzf+Zbj20alGw==' crossorigin='anonymous'></script>
+
+    </head>
+    <body>
+        <script src="./script.js" async defer></script>
+        <div id="app" class="jumbotron">
+            <div id="modalcopied" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    copied successfully!
+                  </div>
+                </div>
+              </div>
+            <form id="frmSearch" action="" class="form-group">
+                <label for="query">search</label>
+                <input id="query" type="text" placeholder="enter library to search for">
+                <button type="button" id="btnSearch" onclick="search();" class="btn btn-primary">search <i class="fa fa-search" aria-hidden="true"></i></button>
+            <select title="cdn provider" id="cdnselect" class="form-control">
+                <option>https://cdnjs.com/libraries?q=</option>
+                <option>https://jsdelivr.com/?query=</option>
+                <option>https://unpkg.com/</option>
+            </select>
+            </form>
+            <div id="unpkgLink" class="card">
+                <label for="txtunpkglink"><a id="idcopytextbtn" class="btn btn-secondary" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="copy to clipboard"><i class="fa fa-code" aria-hidden="true"></i></a></label>
+                <textarea id="txtunpkglink" editable="false">
+
+                </textarea>
+            </div>
+            <iframe id="ifResults" title="search results" src="about:blank"></iframe>
+        </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        
+    </body>
+</html>
